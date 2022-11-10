@@ -33,7 +33,7 @@ php artisan serve
 - Open Chrome (The best UX) web browser, type and enter in address bar.
 
 ```php
-localhost:8000
+localhost:8000/api/v1/receipts
 ```
 
 - Or better use [Postman](https://www.postman.com/) or other preferred API testing client.
