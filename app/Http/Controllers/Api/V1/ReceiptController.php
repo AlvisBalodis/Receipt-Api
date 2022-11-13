@@ -27,8 +27,8 @@ class ReceiptController extends Controller
             ->when(request('id'), function ($query) {
                 $query->where('id', 'LIKE', request('id'));
             })
-            ->when(request('createdon'), function ($query) use ($request) {
-                $query->where('created_at', 'LIKE', '%' . request('createdon') . '%');
+            ->when(request('created-on'), function ($query) use ($request) {
+                $query->where('created_at', 'LIKE', '%' . request('created-on') . '%');
             })
             ->when(request('items'), function ($query) {
                 $query->whereHas('products', function ($query) {

@@ -23,8 +23,8 @@ class ProductController extends Controller
             ->when(request('id'), function ($query) {
                 $query->where('id', 'LIKE', request('id'));
             })
-            ->when(request('productname'), function ($query) {
-                $query->where('name', 'LIKE', '%' . request('productname') . '%');
+            ->when(request('product-name'), function ($query) {
+                $query->where('name', 'LIKE', '%' . request('product-name') . '%');
             });
 
         return new ProductCollection($productsFilter->paginate()->appends($request->query()));
